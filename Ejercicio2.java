@@ -8,23 +8,22 @@ public class Ejercicio2 {
 
 
         String cadena[]=new String[4];
-        String supercadena[]={"mas","cuando","reflexion","piramide"};
+        int largo=0,longitud=0,maslargo=0;
 
         for (int i = 0; i < cadena.length; i++) {
             
-            System.out.println("Ingrese la frase de la posicion " +i+ " del array");
+            System.out.println("Ingrese la palabra de la posicion " +i+ " del array");
             cadena[i]=entrada.nextLine();
-            cadena[i]+=supercadena[i];
+            longitud= cadena[i].length();
+
+            if (longitud>largo){
+                largo=cadena[i].length();
+                maslargo=i;
+            }
+            
         }
 
-        for (int j = 0; j < cadena.length; j++) {
-            System.out.println(cadena[j]);
-        }
-
-        
-
-
-
+        System.out.println("La palabra más larga que ha introducido es: " +cadena[maslargo]);
 
         entrada.close();
 
