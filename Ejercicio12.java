@@ -34,8 +34,9 @@ public class Ejercicio12 {
         
         System.out.println();
 
-        int suma_colum[]=new int[5];
+        // un for inverso al anterior para recorrer columnas y asi sumarlas
         
+        int suma_colum[]=new int[5];
 
         for (int columna = 0; columna < 5; columna++) {
             for (int fila = 0; fila < generador.length; fila++) {
@@ -43,15 +44,9 @@ public class Ejercicio12 {
                 suma_colum[columna]+=generador[fila][columna];
                 
             }
-           
-          
            System.out.print("Sum Colum"+columna+": " +suma_colum[columna]+ " |");
            
         }        
-
-
-
-     
         entrada.close();
     }
     
